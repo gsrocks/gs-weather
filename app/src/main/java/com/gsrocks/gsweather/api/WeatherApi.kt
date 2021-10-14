@@ -7,11 +7,11 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WeatherApi {
-    @GET("/current.json")
+    @GET("current.json")
     suspend fun getCurrentWeather(
-        @Query("key")
-        apiKey: String = API_KEY,
         @Query("q")
-        queryData: String
+        queryData: String,
+        @Query("key")
+        apiKey: String = API_KEY
     ): Response<CurrentWeatherResponse>
 }
