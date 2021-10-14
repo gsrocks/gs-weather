@@ -1,7 +1,5 @@
 package com.gsrocks.gsweather.models
 
-import com.gsrocks.gsweather.models.Condition
-
 data class Current(
     val lastUpdatedEpoch: Int,
     val lastUpdated: String,
